@@ -1,34 +1,37 @@
-# Railway_Management_System
-Railway-Management-System
-Railway Management System website built as course project in DBMS, B.Tech Semester IV.
+# Railway-Management-System
 
-Technologies Used
+Railway Management System website built as course project in DBMS, B.Tech Semester IV. 
+
+## Technologies Used
+
 Used SQL, HTML, CSS and php.
 
-Software To install
+## Software To install
+
 XAMPP
 
-To install and run on your pc:-
-Sign up and sign in in your sql database.
+## To install and run on your pc:-
 
-Run railway.sql and save databse.
+- Sign up and sign in in your sql database.
 
-Add your sql password and user name in indicated portion of db.php file.
+- Run railway.sql and save databse. 
 
-Make sure you have active sql database connection.
+- Add your sql password and user name in indicated portion of db.php file.
 
-To do so use local server solution software like xampp which is open source and easy to use.
+- Make sure you have active sql database connection.
 
-Go to C:\xampp\htdocs
+- To do so use local server solution software like xampp which is open source and easy to use. 
 
-Clear the foder
+  - Go to C:\xampp\htdocs
 
-Now add this project folder here
+  - Clear the foder 
 
-Rename this project folder to railway
+  - Now add this project folder here
 
-After doing these changes now start the XAMPP server
+  - Rename this project folder to **railway**
 
-Finally run index.htm
+- After doing these changes now start the XAMPP server
 
-Feel free to ask queries if facing any issues in installation.
+- Finally run index.htm 
+
+Feel free to ask queries if facing any issues in installation. 
