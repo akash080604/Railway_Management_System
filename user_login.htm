@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Login</title>
+    <style>
+        /* Your existing CSS styles */
+        .content-box {
+            width: 400px;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        body {
+            background-image: url('userlogin.jpg');
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* New header and footer styles */
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>User Login</h1>
+    </header>
+
+    <div class="content-box">
+        <form action="user_login.php" method="post">
+            <div align="center" style="color: white;">
+                <h2>Enter the details:</h2><br>
+                Registered Mobile No: <input type="text" name="mno" required><br><br>
+                Password: <input type="password" name="password" required><br><br>
+                <input type="submit" value="Login"><br><br>
+                <a href="index.htm">Home Page</a>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 RAILWAY MANAGEMENT SYSTEM</p>
+    </footer>
+</body>
+</html>

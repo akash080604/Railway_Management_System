@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New User Registration</title>
+    <style>
+        body {
+            background-image: url(newuser.jpg);
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="date"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: none;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+<header style="background-color: #333; color: white; text-align: center; padding: 10px;">
+    <h1>Welcome to RAILWAY MANAGEMENT SYSTEM</h1>
+</header>
+
+<div class="container">
+    <form action="new_user_form.php" method="post" onsubmit="return validateForm()">
+        <div align="center">
+            <h2>Kindly enter your credentials!!!</h2>
+            <br>
+            Password: <input type="password" name="password" required><br><br>
+            E-mail ID: <input type="text" name="email" id="emailid" required><br>
+            <span id="emailError" class="error"></span><br>
+            Mobile No.: <input type="text" name="mobile" id="mobileno" required><br>
+            <span id="phoneError" class="error"></span><br>
+
+            DOB: <input type="date" name="dob" required><br><br>
+
+            <input type="submit" value="Save"><br><br>
+
+            <a href="index.htm">Home Page</a>
+        </div>
+    </form>
+</div>
+
+<footer style="background-color: #333; color: white; text-align: center; padding: 10px;">
+    <p>&copy; 2024 RAILWAY MANAGEMENT SYSTEM. All Rights Reserved.</p>
+</footer>
+
+<script>
+    function validateForm() {
+        var email = document.getElementById('emailid').value;
+        var phone = document.getElementById('mobileno').value;
+        var emailError = document.getElementById('emailError');
+        var phoneError = document.getElementById('phoneError');
+
+        // Check if email contains "@"
+        if (!email.includes('@')) {
+            emailError.textContent = "Please enter a valid email address.";
+            return false; // Prevent form submission
+        } else {
+            emailError.textContent = ""; // Clear previous error message
+        }
+
+        // Check if phone number is 10 digits
+        if (phone.length !== 10 || isNaN(phone)) {
+            phoneError.textContent = "Phone number must be 10 digits and numeric.";
+            return false; // Prevent form submission
+        } else {
+            phoneError.textContent = ""; // Clear previous error message
+            return true; // Allow form submission
+        }
+    }
+</script>
+
+</body>
+</html>
